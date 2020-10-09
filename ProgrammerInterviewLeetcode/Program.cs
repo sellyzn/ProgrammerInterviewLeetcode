@@ -11,51 +11,9 @@ namespace ProgrammerInterviewLeetcode
     {
         public static void Main(string[] args)
         {
-            var A = new int[] { 1, 2, 3, 0, 0, 0 };
-            var B = new int[] { 2, 5, 6 };
-            Merge(A, 3, B, 3);
-            foreach(var num in A)
-            {
-                Console.WriteLine(num);
-            }
+            
         }
-        public static void Merge(int[] A, int m, int[] B, int n)
-        {
-            //for (var i = m + n - 1; i >= 0; i--)
-            //{
-            var i = m + n - 1;
-            while (m > 0 && n > 0)
-            {
-                //if(A[m - 1] > B[n - 1])
-                //{
-                //    A[i] = A[m - 1];
-                //    i--;
-                //    m--;
-                //}
-                //else
-                //{
-                //    A[i] = B[n - 1];
-                //    i--;
-                //    n--;
-                //}
-                A[i--] = (A[m - 1] > B[n - 1]) ? A[(m--) - 1] : B[(n--) - 1];
-               
-            }
-            while (m > 0)
-            {
-                A[i--] = A[(m--) - 1];
-                //m--;
-                //i--;
-            }
-            while (n > 0)
-            {
-                A[i--] = B[(n--) - 1];
-                //n--;
-                //i--;
-            }
-
-            //}
-        }
+        
         public static bool isPalindrome(ListNode head)
         {
             var st = new Stack<int>();
