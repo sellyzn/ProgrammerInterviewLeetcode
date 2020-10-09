@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProgrammerInterviewLeetcode.TwoPointers.TwoPointersEasy
+{
+    public class MergeTwoSortedArrayszn
+    {
+        //A = [1,2,3,0,0,0]   m = 3
+        //B = [2,5,6]         n = 3
+        //Output: [1,2,2,3,5,6]
+        public void Merge(int[] A, int m, int[] B, int n)
+        {
+            var i = m + n - 1;
+            while (m > 0 && n > 0)
+            {
+                //if(A[m - 1] > B[n - 1])
+                //{
+                //    A[i] = A[m - 1];
+                //    i--;
+                //    m--;
+                //}
+                //else
+                //{
+                //    A[i] = B[n - 1];
+                //    i--;
+                //    n--;
+                //}
+                A[i--] = (A[m - 1] > B[n - 1]) ? A[(m--) - 1] : B[(n--) - 1];
+
+            }
+            while (m > 0)
+            {
+                A[i--] = A[(m--) - 1];
+                //m--;
+                //i--;
+            }
+            while (n > 0)
+            {
+                A[i--] = B[(n--) - 1];
+                //n--;
+                //i--;
+            }
+        }
+    }
+}
