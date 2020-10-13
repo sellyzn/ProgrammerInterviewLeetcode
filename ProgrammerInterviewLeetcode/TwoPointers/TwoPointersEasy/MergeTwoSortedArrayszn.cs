@@ -61,5 +61,21 @@ namespace ProgrammerInterviewLeetcode.TwoPointers.TwoPointersEasy
                 A[i--] = B[(n--) - 1];
             }
         }
+
+        public void MergeUp(int[] A, int m, int[] B, int n)
+        {
+            var i = m - 1;
+            var j = n - 1;
+            var k = m + n - 1;
+            while(i >= 0 && j >= 0)
+            {
+                if (A[i] < B[j])
+                    A[k--] = B[j--];
+                else
+                    A[k--] = A[i--];
+            }
+            while (j >= 0)
+                A[k--] = B[j--];
+        }
     }
 }

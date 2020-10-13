@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinarySearch\BinarySearchEasy\MagicIndexzn.cs" />
+    <Compile Include="BinarySearch\BinarySearchEasy\SearchSparseArrayzn.cs" />
     <Compile Include="LinkedList\LinkedListMedium\AddTwoNumberszn.cs" />
     <Compile Include="LinkedList\LinkedListMedium\DetectCyclezn.cs" />
     <Compile Include="LinkedList\LinkedListEasy\GetIntersectionNodezn.cs" />
@@ -55,13 +57,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LinkedList\LinkedListEasy\RemoveDuplicateNodeszn.cs" />
     <Compile Include="LinkedList\LinkedListEasy\ReturnTheKthNodeFromTheBottomzn.cs" />
+    <Compile Include="TwoPointers\TwoPointersMedium\SearchMartrixzn.cs" />
+    <Compile Include="TwoPointers\TwoPointersMedium\SmallestDistancezn.cs" />
     <Compile Include="TwoPointers\TwoPointersEasy\MergeTwoSortedArrayszn.cs" />
+    <Compile Include="TwoPointers\TwoPointersMedium\WordsDistancezn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TwoPointers\TwoPointersMedium\" />
+    <Folder Include="BinarySearch\BinarySearchMedium\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
