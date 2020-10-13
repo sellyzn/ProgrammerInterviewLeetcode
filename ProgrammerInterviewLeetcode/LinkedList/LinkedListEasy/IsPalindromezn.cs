@@ -20,7 +20,7 @@ namespace ProgrammerInterviewLeetcode.LinkedList.LinkedListEasy
             var q = head;
             while(q != null)
             {
-                if(q.val != st.Pop())
+                if(q.val != st.Peek())   //can not use Pop() here. will report stack empty error in below st.Pop() command line.
                 {
                     return false;
                 }
@@ -32,5 +32,16 @@ namespace ProgrammerInterviewLeetcode.LinkedList.LinkedListEasy
             }
             return true;
         }
+
+        //Program Main test case
+        //var arr = new int[] { 1 };
+        //var lli = new LinkList(arr); 
+        //var res = isPalindrome(lli.head);
+        //if (res == true)
+        //    Console.WriteLine("true");
+        //else
+        //    Console.WriteLine("false");
+
+        
     }
 }
